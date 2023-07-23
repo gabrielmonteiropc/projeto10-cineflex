@@ -1,14 +1,21 @@
+import { Link } from 'react-router-dom';
 import { ButtonsContainer, SessionContainer } from './styled';
 
 export default function SessionCard(props) {
 
-    const { date, weekday, showtimes } = props.sessão;
+    const { id, date, weekday, showtimes } = props.sessão;
 
     return (
         <SessionContainer>
             {`${weekday} - ${date}`}
             <ButtonsContainer>
-                {showtimes.map(horário => <button key={horário.id}>{horário.name}</button>)}
+                {showtimes.map(horário => (
+
+                    <Link key={horário.id} to={`/assentos/${id}`}>
+                        <button>{horário.name}</button>
+                    </Link>
+
+                ))}
             </ButtonsContainer>
         </SessionContainer>
     )

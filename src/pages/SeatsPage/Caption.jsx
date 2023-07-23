@@ -1,4 +1,5 @@
 import { CaptionItem, CaptionCircle, CaptionContainer } from './styled';
+import { seatColors } from '../../constants/colors';
 
 export default function Caption() {
 
