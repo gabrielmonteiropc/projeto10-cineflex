@@ -1,7 +1,7 @@
 import { ListContainer, PageContainer } from './styled';
 import MovieCard from './../../components/MovieCard/MovieCard'
 import { useEffect, useState } from 'react';
-import { UrlObterListaDeFilmes } from './../../constants/url';
+import { UrlPadrão } from './../../constants/url';
 import axios from 'axios';
 
 
@@ -11,7 +11,7 @@ export default function HomePage() {
 
     useEffect(() => {
 
-        const promise = axios.get(UrlObterListaDeFilmes);
+        const promise = axios.get(`${UrlPadrão}/movies`);
 
         promise.then(respostaSucesso => setFilmes(respostaSucesso.data));
 
@@ -20,18 +20,16 @@ export default function HomePage() {
     }, []);
 
     //Mostra mensagem para o usuário se os filmes ainda n chegaram
-    if(filmes === undefined){
+    if (filmes === undefined) {
         return <div>Carregando lista de filmes</div>
     }
-
-    console.log(filmes);
 
     return (
         <PageContainer>
             Selecione o filme
 
             <ListContainer>
-                {filmes.map(filme => <MovieCard filme={filme} key={filme.id} /> )}
+                {filmes.map(filme => <MovieCard filme={filme} key={filme.id} />)}
             </ListContainer>
 
         </PageContainer>

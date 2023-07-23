@@ -1,13 +1,14 @@
 import { ButtonsContainer, SessionContainer } from './styled';
 
-export default function SessionCard() {
+export default function SessionCard(props) {
+
+    const { date, weekday, showtimes } = props.sessão;
 
     return (
         <SessionContainer>
-            Sexta - 03/03/2023
+            {`${weekday} - ${date}`}
             <ButtonsContainer>
-                <button>14:00</button>
-                <button>15:00</button>
+                {showtimes.map(horário => <button key={horário.id}>{horário.name}</button>)}
             </ButtonsContainer>
         </SessionContainer>
     )

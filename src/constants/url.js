@@ -1,1 +1,1 @@
-export const UrlObterListaDeFilmes = 'https://mock-api.driven.com.br/api/v8/cineflex/movies';
+export const UrlPadrão = 'https://mock-api.driven.com.br/api/v8/cineflex';
