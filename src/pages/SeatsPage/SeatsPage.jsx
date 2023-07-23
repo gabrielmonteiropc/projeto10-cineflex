@@ -32,6 +32,8 @@ export default function SeatsPage() {
 
     }
 
+    console.log(sessão);
+
     function selecionarAssento(seat) {
 
         if (!seat.isAvailable) {
@@ -72,7 +74,7 @@ export default function SeatsPage() {
 
             <Caption />
 
-            <BuyerForm selecionar={selecionar} />
+            <BuyerForm selecionar={selecionar} sessão={sessão} />
 
             <Footer
                 posterURL={sessão.movie.posterURL}

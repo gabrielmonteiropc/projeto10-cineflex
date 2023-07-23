@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function BuyerForm(props) {
 
-    const { selecionar } = props;
+    const { selecionar, sessão } = props;
 
     const [nomeUsuario, setNomeUsuario] = useState('');
     const [cpfUsuario, setCpfUsuario] = useState('');
@@ -29,7 +29,6 @@ export default function BuyerForm(props) {
         promise.then(respostaSucesso => navigator('/sucesso'));
 
         promise.catch(respostaErro => alert(respostaErro.response.data.message));
-
 
         // useEffect(() => {
 
