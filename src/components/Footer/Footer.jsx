@@ -11,7 +11,7 @@ export default function Footer(props) {
             </div>
             <div>
                 <p>{title}</p>
-                <p>{weekday && horas && `${weekday} - ${horas}`}</p>
+                <p>{weekday && horas ? `${weekday} - ${horas}` : ''}</p>
             </div>
         </FooterContainer>
     );

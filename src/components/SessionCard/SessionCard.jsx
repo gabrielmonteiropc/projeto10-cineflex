@@ -11,7 +11,7 @@ export default function SessionCard(props) {
             <ButtonsContainer>
                 {showtimes.map(horário => (
 
-                    <Link key={horário.id} to={`/assentos/${id}`}>
+                    <Link key={horário.id} to={`/assentos/${horário.id}`}>
                         <button>{horário.name}</button>
                     </Link>
 
