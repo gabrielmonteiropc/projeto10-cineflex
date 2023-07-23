@@ -1,7 +1,12 @@
 import { NavContainer } from './styled';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     return (
-        <NavContainer>CINEFLEX</NavContainer>
+        <NavContainer>
+            <Link to={"/"}>
+                CINEFLEX
+            </Link>
+        </NavContainer>
     );
 }
