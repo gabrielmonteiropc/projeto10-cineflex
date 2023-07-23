@@ -12,10 +12,10 @@ export default function App() {
         <NavBar />
 
         <Routes>
-          <HomePage />
-          {/* <SeatsPage /> */}
-          {/* <SessionsPage /> */}
-          {/* <SuccessPage /> */}
+          <Route path='/' element={<HomePage />} />
+          <Route path='/sessoes' element={<SessionsPage />} />
+          <Route path='/assentos' element={<SeatsPage />} />
+          <Route path='/sucesso' element={<SuccessPage />} />
         </Routes>
 
       </BrowserRouter >
