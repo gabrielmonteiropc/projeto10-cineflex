@@ -45,12 +45,6 @@ export default function BuyerForm(props) {
 
         promise.catch(respostaErro => alert(respostaErro.response.data.message));
 
-        // useEffect(() => {
-
-
-
-        // }, []);
-
     }
 
     return (
