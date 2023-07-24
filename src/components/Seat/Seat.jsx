@@ -22,6 +22,6 @@ export default function Seat(props) {
     }, [estaSelecionado])
 
     return (
-        <SeatItem onClick={selecionarAssento} status={status}>{seat.name} </SeatItem>
+        <SeatItem data-test="seat" onClick={selecionarAssento} status={status}>{seat.name} </SeatItem>
     );
 }
