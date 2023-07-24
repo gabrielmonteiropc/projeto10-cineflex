@@ -9,7 +9,7 @@ export default function SuccessPage(props) {
         <PageContainer>
             <h1>Pedido feito <br /> com sucesso!</h1>
 
-            <TextContainer>
+            <TextContainer data-test="movie-info">
                 <strong><p>Filme e sessão</p></strong>
                 <p>{movie}</p>
                 <p>{date} - {sessão}</p>
