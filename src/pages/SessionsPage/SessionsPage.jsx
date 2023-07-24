@@ -33,7 +33,7 @@ export default function SessionsPage() {
             Selecione o horário
 
             <div>
-                {sessões.days.map(sessão => <SessionCard key={sessão.id} sessão={sessão} />)}
+                {sessões.days.map(sessão => <SessionCard data-test="movie-day" key={sessão.id} sessão={sessão} />)}
             </div>
 
             <Footer posterURL={sessões.posterURL} title={sessões.title} />

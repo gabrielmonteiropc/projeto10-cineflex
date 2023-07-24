@@ -6,15 +6,15 @@ export default function Caption() {
     return (
         <CaptionContainer>
             <CaptionItem>
-                <CaptionCircle status={'selected'} seatColors={seatColors} />
+                <CaptionCircle data-test="seat" status={'selected'} seatColors={seatColors} />
                 Selecionado
             </CaptionItem>
             <CaptionItem>
-                <CaptionCircle status={'available'} seatColors={seatColors} />
+                <CaptionCircle data-test="seat" status={'available'} seatColors={seatColors} />
                 Disponível
             </CaptionItem>
             <CaptionItem>
-                <CaptionCircle status={'unavailable'} seatColors={seatColors} />
+                <CaptionCircle data-test="seat" status={'unavailable'} seatColors={seatColors} />
                 Indisponível
             </CaptionItem>
         </CaptionContainer>
