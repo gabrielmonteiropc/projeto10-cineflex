@@ -65,7 +65,7 @@ export default function BuyerForm(props) {
                 value={cpfUsuario}
             />
 
-            <button type='submit'>Reservar Assento(s)</button>
+            <button data-test="book-seat-btn" type='submit'>Reservar Assento(s)</button>
         </FormContainer>
     );
 }
