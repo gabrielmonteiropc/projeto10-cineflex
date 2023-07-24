@@ -32,7 +32,7 @@ export default function SessionsPage() {
         <PageContainer>
             Selecione o horário
 
-            <div>
+            <div data-test="movie-day">
                 {sessões.days.map(sessão => <SessionCard data-test="movie-day" key={sessão.id} sessão={sessão} />)}
             </div>
 
