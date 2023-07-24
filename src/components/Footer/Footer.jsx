@@ -5,7 +5,7 @@ export default function Footer(props) {
     const { posterURL, title, weekday, horas } = props;
 
     return (
-        <FooterContainer>
+        <FooterContainer data-test="footer">
             <div>
                 <img src={posterURL} alt={title} />
             </div>
