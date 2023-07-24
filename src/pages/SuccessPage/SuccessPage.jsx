@@ -27,7 +27,7 @@ export default function SuccessPage(props) {
             </TextContainer>
 
             <Link to='/'>
-                <button>Voltar para Home</button>
+                <button data-test="go-home-btn">Voltar para Home</button>
             </Link>
         </PageContainer >
     )
