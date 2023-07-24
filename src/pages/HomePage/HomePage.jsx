@@ -24,6 +24,8 @@ export default function HomePage() {
         return <div>Carregando lista de filmes</div>
     }
 
+    console.log(filmes);
+
     return (
         <PageContainer>
             Selecione o filme
