@@ -9,7 +9,7 @@ export default function MovieCard(props) {
     return (
         <MovieContainer data-test="movie">
             <Link to={`/sessoes/${id}`}>
-                <img src={posterURL} alt={title} />
+                <img src={posterURL} data-test="movie" alt={title} />
             </Link>
         </MovieContainer>
     );
