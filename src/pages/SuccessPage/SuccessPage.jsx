@@ -15,7 +15,7 @@ export default function SuccessPage(props) {
                 <p>{date} - {sessão}</p>
             </TextContainer>
 
-            <TextContainer>
+            <TextContainer data-test="seats-info">
                 <strong><p>Ingressos</p></strong>
 
                 {ingressos.map(i => <p key={i}>{i}</p>)}
