@@ -6,7 +6,7 @@ export default function SessionCard(props) {
     const { id, date, weekday, showtimes } = props.sessão;
 
     return (
-        <SessionContainer>
+        <SessionContainer data-test="movie-day" >
             {`${weekday} - ${date}`}
             <ButtonsContainer>
                 {showtimes.map(horário => (
