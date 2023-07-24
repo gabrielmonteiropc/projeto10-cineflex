@@ -8,7 +8,7 @@ export default function SessionCard(props) {
     return (
         <SessionContainer data-test="movie-day" >
             {`${weekday} - ${date}`}
-            <ButtonsContainer data-test="movie-day">
+            <ButtonsContainer data-test="showtime">
                 {showtimes.map(horário => (
 
                     <Link data-test="showtime" key={horário.id} to={`/assentos/${horário.id}`}>
