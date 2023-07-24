@@ -48,7 +48,7 @@ export default function BuyerForm(props) {
     }
 
     return (
-        <FormContainer onSubmit={pegarDados}>
+        <FormContainer data-test="movie-day" onSubmit={pegarDados}>
             <label htmlFor='nomeUsuario'>Nome do Comprador:</label>
             <input data-test="client-name"
                 id='nomeUsuario'
