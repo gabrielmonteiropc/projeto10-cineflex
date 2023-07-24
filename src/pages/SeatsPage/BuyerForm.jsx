@@ -50,7 +50,7 @@ export default function BuyerForm(props) {
     return (
         <FormContainer onSubmit={pegarDados}>
             <label htmlFor='nomeUsuario'>Nome do Comprador:</label>
-            <input
+            <input data-test="client-name"
                 id='nomeUsuario'
                 placeholder="Digite seu nome..."
                 onChange={(e) => setNomeUsuario(e.target.value)}
@@ -58,7 +58,7 @@ export default function BuyerForm(props) {
             />
 
             <label htmlFor='cpfUsuario' >CPF do Comprador:</label>
-            <input
+            <input data-test="client-cpf"
                 id='cpfUsuario'
                 placeholder="Digite seu CPF..."
                 onChange={(e) => setCpfUsuario(e.target.value)}
