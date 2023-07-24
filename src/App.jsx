@@ -18,8 +18,8 @@ export default function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/sessoes/:idFilme' element={<SessionsPage />} />
-          <Route path='/assentos/:idSessao' element={<SeatsPage pegarInformações={pegarInformações} setPegarInformações={setPegarInformações} />} />
-          <Route path='/sucesso' element={<SuccessPage />} />
+          <Route path='/assentos/:idSessao' element={<SeatsPage setPegarInformações={setPegarInformações} />} />
+          <Route path='/sucesso' element={<SuccessPage pegarInformações={pegarInformações} />} />
         </Routes>
 
       </BrowserRouter >

@@ -9,7 +9,9 @@ import axios from 'axios';
 import { UrlPadrão } from '../../constants/url';
 import { seatColors } from '../../constants/colors';
 
-export default function SeatsPage() {
+export default function SeatsPage(props) {
+
+    const { setPegarInformações } = props;
 
     const { idSessao } = useParams();
 
@@ -74,7 +76,11 @@ export default function SeatsPage() {
 
             <Caption />
 
-            <BuyerForm selecionar={selecionar} sessão={sessão} />
+            <BuyerForm
+                selecionar={selecionar}
+                sessão={sessão}
+                setPegarInformações={setPegarInformações}
+            />
 
             <Footer
                 posterURL={sessão.movie.posterURL}

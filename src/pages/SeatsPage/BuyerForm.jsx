@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function BuyerForm(props) {
 
-    const { selecionar, sessão } = props;
+    const { selecionar, sessão, setPegarInformações } = props;
 
     const [nomeUsuario, setNomeUsuario] = useState('');
     const [cpfUsuario, setCpfUsuario] = useState('');
@@ -26,7 +26,22 @@ export default function BuyerForm(props) {
 
         const promise = axios.post(`${UrlPadrão}/seats/book-many`, novaLista);
 
-        promise.then(respostaSucesso => navigator('/sucesso'));
+        promise.then(respostaSucesso => {
+            console.log(respostaSucesso);
+
+            const informações = {
+                movie: sessão.movie.title,
+                date: sessão.day.date,
+                sessão: sessão.name,
+                ingressos: selecionar.map(s => `Assentos ${s.name}`),
+                nome: nomeUsuario,
+                cpf: cpfUsuario
+            }
+
+            setPegarInformações(informações);
+
+            navigator('/sucesso')
+        });
 
         promise.catch(respostaErro => alert(respostaErro.response.data.message));
 
