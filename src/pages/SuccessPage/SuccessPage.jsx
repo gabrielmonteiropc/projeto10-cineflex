@@ -17,12 +17,10 @@ export default function SuccessPage(props) {
 
             <TextContainer data-test="seats-info">
                 <strong><p>Ingressos</p></strong>
-
                 {ingressos.map(i => <p key={i}>{i}</p>)}
-
             </TextContainer>
 
-            <TextContainer>
+            <TextContainer data-test="client-info">
                 <strong><p>Comprador</p></strong>
                 <p>Nome: {nome}</p>
                 <p>CPF: {cpf}</p>
